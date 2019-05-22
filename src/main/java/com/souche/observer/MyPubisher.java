@@ -18,4 +18,5 @@ public class MyPubisher implements ApplicationContextAware {
         System.out.println("into My Publisher's method to add event");
         applicationContext.publishEvent(event);
     }
+
 }
