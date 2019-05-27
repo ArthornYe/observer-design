@@ -14,9 +14,9 @@ public class MyTestApplicationListener implements ApplicationListener<MyTestEven
 
     @Override
     public void onApplicationEvent(MyTestEvent applicationEvent) {
-        System.out.println(applicationEvent.getClass());
-        if(applicationEvent instanceof MyTestEvent){
+        //System.out.println(applicationEvent.getClass());
+        //if(applicationEvent instanceof MyTestEvent){
             System.out.println("get to MyTestApplicationListener...");
-        }
+        //}
     }
 }

@@ -15,10 +15,10 @@ public class MyApplicationListener implements ApplicationListener<MyTestEvent> {
 
     @Override
     public void onApplicationEvent(MyTestEvent applicationEvent) {
-        System.out.println(applicationEvent.getClass());
-        if(applicationEvent instanceof  MyTestEvent){
+        //System.out.println(applicationEvent.getClass());
+        //if(applicationEvent instanceof  MyTestEvent){
             System.out.println("get to MyApplicationListener");
-        }
+        //}
     }
 
 }
