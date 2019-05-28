@@ -1,5 +1,6 @@
 package com.souche.observer;
 
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
@@ -10,13 +11,14 @@ import org.springframework.stereotype.Service;
  */
 @Order(1)
 @Service("myTestApplictionListener")
-public class MyTestApplicationListener implements ApplicationListener<MyTestEvent> {
+public class MyTestApplicationListener implements ApplicationListener<ApplicationEvent> {
 
     @Override
-    public void onApplicationEvent(MyTestEvent applicationEvent) {
+    public void onApplicationEvent(ApplicationEvent applicationEvent) {
         //System.out.println(applicationEvent.getClass());
-        //if(applicationEvent instanceof MyTestEvent){
+        //没有指定具体的自定义事件类型,spring初始化的一些事件也会进入,判断事件类型或者指定事件类型
+        if(applicationEvent instanceof MyTestEvent){
             System.out.println("get to MyTestApplicationListener...");
-        //}
+        }
     }
 }
